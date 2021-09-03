@@ -42,13 +42,30 @@
           <button class="button" @click="initTour('ecc-fc')">Iniciar tour</button>
         </div>
       </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Proceso general de una Caja Chica FC</h3>
+        </div>
+
+        <div class="card-footer">
+          <button class="button" @click="initTourProcess('pcc-fc')">Iniciar tour</button>
+        </div>
+      </div>
     </div>
+
+    <process-bar v-if="showProcessBar"></process-bar>
   </div>
 </template>
 
 <script>
+  import ProcessBar from './components/ProcessBar.vue';
+
   export default {
     name: "App",
+    components: {
+      ProcessBar
+    },
     data () {
       return {
         options: {
@@ -59,12 +76,16 @@
             buttonStop: 'Finalizar tour'
           }
         },
+        showProcessBar: false,
       }
     },
     methods: {
       initTour(tourName) {
         this.$tours[tourName].start();
       },
+      initTourProcess(tourName) {
+        this.showProcessBar = true;
+      }
     },
     computed: {
       stepsESIVFC() {
