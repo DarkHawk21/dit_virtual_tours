@@ -1,0 +1,37 @@
+.v-step {
+    max-width: 420px !important;
+    background: #fff !important;
+}
+
+.v-step__header {
+    font-size: 18px;
+    padding: 0.7rem !important;
+    background: #002f6c !important;
+    border-bottom: 1px solid rgba(#fff,0.3);
+}
+
+.v-step__content {
+    padding: 0.4rem 0.1rem;
+    color: #22363c !important;
+}
+
+.v-step__arrow {
+    &--dark {
+        &:before {
+            background: #ffffff !important;
+        }
+    }
+}
+
+.v-step__button {
+    height: 2rem !important;
+    color: #fff !important;
+    padding: .4rem .8rem !important;
+    background: #002f6c !important;
+    border: .05rem solid transparent !important;
+
+    &:hover {
+        color: #fff !important;
+        background-color: rgb(102, 97, 91) !important;
+    }
+}
